@@ -1284,7 +1284,10 @@ body::before {
         background-image: 
             linear-gradient(135deg, rgba(255, 245, 249, 0.95) 0%, rgba(255, 249, 252, 0.95) 100%),
             url('backgroundmobile.png');
-        background-size: cover, cover;
+        background-size: contain, contain;
+        background-position: center, center;
+        background-repeat: no-repeat, no-repeat;
+        background-attachment: fixed, fixed;
     }
 }
 
