@@ -948,6 +948,11 @@ body::before {
     /* Hero */
     .hero {
         padding: 2rem 1.2rem;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 15px;
+        margin: 1.5rem 0.75rem;
+        box-shadow: 0 8px 24px rgba(255, 107, 157, 0.12);
+        backdrop-filter: blur(10px);
     }
 
     .hero h2 {
@@ -1278,7 +1283,7 @@ body::before {
 @media (max-width: 768px) {
     body::before {
         background-image: url('backgroundmobile.png');
-        background-size: contain;
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: fixed;
