@@ -39,8 +39,8 @@ body::before {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    opacity: 0.06;
-    filter: brightness(2.5) saturate(0.3) contrast(0.8);
+    opacity: 0.12;
+    filter: brightness(1.8) saturate(0.5) contrast(0.9);
     pointer-events: none;
     z-index: -1;
 }
