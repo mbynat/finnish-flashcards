@@ -423,7 +423,8 @@ class FlashcardApp {
         window.addEventListener('scroll', () => {
             const scrollTop = window.scrollY || window.pageYOffset;
             
-            // Hide navbar when scrolling down more than threshold
+            // Hide ONLY navbar when scrolling down more than threshold
+            // Header stays visible
             if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
                 navbar.classList.add('hidden');
             } 
