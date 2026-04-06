@@ -106,6 +106,12 @@ body::before {
     font-weight: 700;
     margin: 0;
     white-space: nowrap;
+    cursor: pointer;
+}
+
+.logo:focus {
+    outline: 3px solid rgba(255, 107, 157, 0.35);
+    outline-offset: 4px;
 }
 
 .nav-buttons {
@@ -186,19 +192,17 @@ body::before {
 }
 
 .stat-box {
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: var(--shadow);
-    min-width: 150px;
-}
+        background: transparent;
+        padding: 0.75rem 1rem;
+        border-radius: 0;
+        box-shadow: none;
+        min-width: 150px;
+    }
 
-.stat-number {
-    font-size: 2.5rem;
-    color: var(--primary);
-    font-weight: 700;
-}
-
+    .stat-number {
+        font-size: 2.5rem;
+        color: var(--primary);
+        font-weight: 700;
 .stat-label {
     color: var(--text-light);
     margin-top: 0.5rem;
@@ -981,12 +985,12 @@ body::before {
     }
 
     .stat-box {
-        padding: 1.3rem;
-        border-radius: 12px;
+        padding: 0.8rem 0.9rem;
+        border-radius: 0;
         flex: 0 1 46%;
         text-align: center;
-        background: #ffffff;
-        box-shadow: 0 2px 8px rgba(255, 107, 157, 0.08);
+        background: transparent;
+        box-shadow: none;
     }
 
     .stat-number {

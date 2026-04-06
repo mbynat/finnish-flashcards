@@ -58,6 +58,16 @@ class FlashcardApp {
             });
         }
 
+        const logoElement = document.querySelector('.logo');
+        if (logoElement) {
+            logoElement.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.switchSection('home');
+                }
+            });
+        }
+
         // Add Card Form
         const addCardForm = document.getElementById('addCardForm');
         if (addCardForm) {
