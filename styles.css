@@ -21,10 +21,11 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, var(--background) 0%, #fff9fc 100%);
+    background: transparent;
     color: var(--text);
     min-height: 100vh;
     padding-top: 100px;
+    position: relative;
 }
 
 body::before {
@@ -34,13 +35,15 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('backgroundpc.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    opacity: 0.12;
-    filter: brightness(1.8) saturate(0.5) contrast(0.9);
+    background-image: 
+        linear-gradient(135deg, rgba(255, 245, 249, 0.95) 0%, rgba(255, 249, 252, 0.95) 100%),
+        url('backgroundpc.png');
+    background-size: cover, cover;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    opacity: 1;
+    filter: saturate(0.8) contrast(1.05);
     pointer-events: none;
     z-index: -1;
 }
@@ -48,6 +51,8 @@ body::before {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 /* Header */
@@ -1276,7 +1281,10 @@ body::before {
 /* Mobile Background Image */
 @media (max-width: 768px) {
     body::before {
-        background-image: url('backgroundmobile.png');
+        background-image: 
+            linear-gradient(135deg, rgba(255, 245, 249, 0.95) 0%, rgba(255, 249, 252, 0.95) 100%),
+            url('backgroundmobile.png');
+        background-size: cover, cover;
     }
 }
 
