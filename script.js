@@ -16,6 +16,7 @@ class FlashcardApp {
     init() {
         this.setupEventListeners();
         this.setupKeyboardNavigation();
+        this.setupScrollDetection();
         this.updateAllViews();
         // Ensure display is correct on page load
         this.renderAllCards();
@@ -410,6 +411,31 @@ class FlashcardApp {
                 }, 0);
             }
         }
+    }
+
+    setupScrollDetection() {
+        const navbar = document.querySelector('.navbar');
+        let lastScrollTop = 0;
+        const scrollThreshold = 30;
+        
+        // Only enable on mobile
+        const isMobile = window.innerWidth <= 768;
+        if (!isMobile) return;
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            
+            // Hide navbar when scrolling down
+            if (scrollTop > lastScrollTop + scrollThreshold) {
+                navbar.classList.add('hidden');
+            } 
+            // Show navbar when scrolling up
+            else if (scrollTop < lastScrollTop - scrollThreshold) {
+                navbar.classList.remove('hidden');
+            }
+            
+            lastScrollTop = scrollTop;
+        });
     }
 
     saveEditCard() {
