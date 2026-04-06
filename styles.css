@@ -974,16 +974,19 @@ body::before {
 
     .stats {
         flex-direction: row;
-        gap: 1.5rem;
-        margin: 2rem 0;
+        gap: 1rem;
+        margin: 1.5rem auto;
+        max-width: 100%;
+        justify-content: center;
     }
 
     .stat-box {
-        padding: 1.5rem;
-        border-radius: 15px;
-        flex: 1;
+        padding: 1.3rem;
+        border-radius: 12px;
+        flex: 0 1 46%;
         text-align: center;
         background: #ffffff;
+        box-shadow: 0 2px 8px rgba(255, 107, 157, 0.08);
     }
 
     .stat-number {
@@ -1045,12 +1048,15 @@ body::before {
         max-width: 100%;
         border-radius: 12px;
         background: #ffffff;
+        margin: 1.5rem 0.75rem;
+        box-shadow: 0 8px 24px rgba(255, 107, 157, 0.12);
     }
 
     .form-container h2 {
         font-size: 1.6rem;
         margin-bottom: 1.8rem;
         font-weight: 600;
+        color: var(--primary);
     }
 
     .form-group input,
@@ -1095,6 +1101,22 @@ body::before {
     .cards-grid {
         grid-template-columns: 1fr;
         gap: 1.2rem;
+        margin: 1.5rem 0.75rem;
+    }
+
+    .section-header {
+        background: #ffffff;
+        padding: 1.5rem;
+        border-radius: 12px;
+        margin: 1.5rem 0.75rem !important;
+        box-shadow: 0 8px 24px rgba(255, 107, 157, 0.12);
+        margin-bottom: 1.5rem !important;
+    }
+
+    .section-header h2 {
+        color: var(--primary);
+        font-weight: 700;
+        font-size: 1.4rem;
     }
 
     .card {
@@ -1126,6 +1148,10 @@ body::before {
         background: #ffffff;
     }
 
+    .phrases-list {
+        margin: 1.5rem 0.75rem;
+    }
+
     .phrase-finnish {
         font-size: 1.15rem;
         margin-bottom: 0.7rem;
@@ -1150,16 +1176,22 @@ body::before {
     /* Practice */
     .practice-container {
         max-width: 100%;
+        margin: 1.5rem 0.75rem;
     }
 
     .practice-header {
         gap: 1.4rem;
         margin-bottom: 1.8rem;
+        background: #ffffff;
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(255, 107, 157, 0.12);
     }
 
     .practice-header h2 {
         font-size: 1.6rem;
         font-weight: 600;
+        color: var(--primary);
     }
 
     .practice-selector {
