@@ -415,27 +415,25 @@ class FlashcardApp {
 
     setupScrollDetection() {
         const navbar = document.querySelector('.navbar');
-        let lastScrollTop = 0;
-        const scrollThreshold = 30;
+        if (!navbar) return;
         
-        // Only enable on mobile
-        const isMobile = window.innerWidth <= 768;
-        if (!isMobile) return;
-
+        let lastScrollTop = 0;
+        const scrollThreshold = 50;
+        
         window.addEventListener('scroll', () => {
-            const scrollTop = window.scrollY;
+            const scrollTop = window.scrollY || window.pageYOffset;
             
-            // Hide navbar when scrolling down
-            if (scrollTop > lastScrollTop + scrollThreshold) {
+            // Hide navbar when scrolling down more than threshold
+            if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
                 navbar.classList.add('hidden');
             } 
             // Show navbar when scrolling up
-            else if (scrollTop < lastScrollTop - scrollThreshold) {
+            else if (scrollTop < lastScrollTop) {
                 navbar.classList.remove('hidden');
             }
             
             lastScrollTop = scrollTop;
-        });
+        }, false);
     }
 
     saveEditCard() {
