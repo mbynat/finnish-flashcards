@@ -822,42 +822,362 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* Navbar */
     .nav-content {
         flex-direction: column;
-        gap: 1rem;
+        gap: 0.8rem;
+        padding: 0.8rem 1rem;
     }
 
     .logo {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+    }
+
+    .nav-buttons {
+        gap: 0.5rem;
+    }
+
+    .nav-btn {
+        flex: 1;
+        padding: 0.7rem 0.8rem;
+        font-size: 0.85rem;
+        min-height: 44px;
+    }
+
+    /* Section padding */
+    .section {
+        padding: 1.5rem 1rem;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 2rem 1rem;
     }
 
     .hero h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
     }
 
-    .cards-grid {
-        grid-template-columns: 1fr;
+    .hero p {
+        font-size: 1rem;
     }
 
-    .flashcard {
-        padding: 2rem;
-        min-height: 250px;
-    }
-
-    .card-content {
-        font-size: 1.5rem;
-    }
-
-    .practice-header {
+    .stats {
         flex-direction: column;
         gap: 1rem;
+        margin: 2rem 0;
+    }
+
+    .stat-box {
+        padding: 1.5rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
     }
 
     .hero-buttons {
         flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .backup-section {
+        padding: 1.5rem;
+        margin: 2rem 1rem 0 1rem;
+    }
+
+    .backup-section h3 {
+        font-size: 1.1rem;
+    }
+
+    .backup-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    /* Forms */
+    .form-container {
+        padding: 1.5rem;
+        max-width: 100%;
+    }
+
+    .form-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-group input,
+    .english-definition,
+    .english-phrase-definition,
+    .edit-english-definition {
+        padding: 1rem;
+        font-size: 16px;
+    }
+
+    .definition-input-group .btn-remove-definition {
+        padding: 0.8rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    /* Buttons */
+    .btn {
+        width: 100%;
+        padding: 0.9rem 1rem;
+        font-size: 1rem;
+        min-height: 44px;
+    }
+
+    .btn-large {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .btn-small {
+        padding: 0.7rem 0.9rem;
+        font-size: 0.9rem;
+    }
+
+    /* Cards */
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .card {
+        padding: 1.2rem;
+    }
+
+    .card-front {
+        font-size: 1.2rem;
+    }
+
+    .card-back {
+        font-size: 1rem;
+    }
+
+    .card-label {
+        font-size: 0.7rem;
+    }
+
+    /* Phrases */
+    .phrase-item {
+        padding: 1.2rem;
+    }
+
+    .phrase-finnish {
+        font-size: 1.1rem;
+    }
+
+    .phrase-english {
+        font-size: 0.95rem;
+    }
+
+    .phrase-item-actions {
+        gap: 0.4rem;
+    }
+
+    .phrase-item-actions .btn-edit,
+    .phrase-item-actions .btn-delete {
+        padding: 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    /* Practice */
+    .practice-container {
+        max-width: 100%;
+    }
+
+    .practice-header {
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .practice-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .practice-selector {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+    }
+
+    .practice-mode-toggle,
+    .practice-category-toggle {
+        width: 100%;
+    }
+
+    .toggle-btn {
+        flex: 1;
+        padding: 0.7rem;
+        font-size: 0.85rem;
+        min-height: 44px;
+    }
+
+    .flashcard {
+        padding: 2rem 1.5rem;
+        min-height: 280px;
+        margin: 0 0.5rem;
+    }
+
+    .card-side {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .card-content {
+        font-size: 1.4rem;
+    }
+
+    .practice-controls {
+        gap: 0.8rem;
+        margin-top: 1.5rem;
+    }
+
+    .practice-controls .btn {
+        flex: 1;
+        min-width: 100px;
+        padding: 0.8rem;
+    }
+
+    /* Type Practice */
+    .type-practice-card {
+        padding: 1.5rem 1rem;
+        max-width: 100%;
+    }
+
+    .type-word {
+        font-size: 2rem;
+    }
+
+    .type-answer-input {
+        padding: 1rem;
+        font-size: 16px;
+    }
+
+    .type-label {
+        font-size: 0.8rem;
+    }
+
+    .type-controls .btn {
+        min-width: 100px;
+        padding: 0.8rem;
+    }
+
+    /* Search */
+    .search-input {
+        padding: 1rem;
+        font-size: 16px;
+    }
+
+    /* Modal */
+    .modal-content {
+        width: 95%;
+        margin: 30% auto;
+        padding: 1.5rem;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .modal-actions .btn {
+        min-height: 44px;
+    }
+
+    /* Empty State */
+    .empty-state {
+        padding: 2rem 1rem;
+    }
+
+    .empty-state p {
+        font-size: 1rem;
+    }
+}
+
+/* Extra small devices (< 480px) */
+@media (max-width: 480px) {
+    .nav-content {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.6rem 0.8rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .nav-btn {
+        flex: 1;
+        padding: 0.6rem 0.6rem;
+        font-size: 0.75rem;
+        min-height: 40px;
+    }
+
+    .section {
+        padding: 1rem 0.8rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .stats {
+        gap: 0.8rem;
+        margin: 1.5rem 0;
+    }
+
+    .stat-number {
+        font-size: 1.6rem;
+    }
+
+    .form-container {
+        padding: 1.2rem 1rem;
+    }
+
+    .form-container h2 {
+        font-size: 1.3rem;
     }
 
     .btn {
-        width: 100%;
+        padding: 0.8rem 0.8rem;
+        font-size: 0.95rem;
+    }
+
+    .flashcard {
+        padding: 1.5rem 1rem;
+        min-height: 240px;
+        margin: 0;
+    }
+
+    .card-content {
+        font-size: 1.2rem;
+    }
+
+    .type-word {
+        font-size: 1.7rem;
+    }
+
+    .practice-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .toggle-btn {
+        padding: 0.6rem;
+        font-size: 0.8rem;
+        min-height: 40px;
     }
 }
