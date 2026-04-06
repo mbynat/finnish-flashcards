@@ -24,6 +24,7 @@ body {
     background: linear-gradient(135deg, var(--background) 0%, #fff9fc 100%);
     color: var(--text);
     min-height: 100vh;
+    padding-top: 0;
 }
 
 .container {
@@ -35,8 +36,11 @@ body {
 .navbar {
     background: var(--white);
     box-shadow: var(--shadow);
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     z-index: 100;
     transition: transform 0.3s ease;
 }
@@ -838,33 +842,34 @@ body {
     /* Navbar */
     .nav-content {
         flex-direction: row;
-        gap: 0.3rem;
-        padding: 0.4rem 0.5rem;
+        gap: 0.2rem;
+        padding: 0.3rem 0.4rem;
     }
 
     .logo {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
         margin-right: auto;
         flex-shrink: 0;
+        min-width: auto;
     }
 
     .nav-buttons {
-        gap: 0.2rem;
+        gap: 0.1rem;
         flex-wrap: nowrap;
         overflow-x: auto;
         overflow-y: hidden;
-        width: calc(100% - 1.5rem);
+        flex: 1;
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch;
+        max-width: calc(100vw - 1rem);
     }
 
     .nav-buttons::-webkit-scrollbar {
-        height: 3px;
+        height: 2px;
     }
 
     .nav-buttons::-webkit-scrollbar-track {
-        background: rgba(0, 0, 0, 0.05);
-        border-radius: 10px;
+        background: transparent;
     }
 
     .nav-buttons::-webkit-scrollbar-thumb {
@@ -874,10 +879,14 @@ body {
 
     .nav-btn {
         flex: 0 0 auto;
-        padding: 0.35rem 0.4rem;
-        font-size: 0.65rem;
-        min-height: 32px;
+        padding: 0.25rem 0.35rem;
+        font-size: 0.6rem;
+        min-height: 30px;
         white-space: nowrap;
+    }
+
+    body {
+        padding-top: 50px;
     }
 
     /* Section padding */
