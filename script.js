@@ -17,6 +17,7 @@ class FlashcardApp {
         this.setupEventListeners();
         this.setupKeyboardNavigation();
         this.setupScrollDetection();
+        this.resetNavbarScroll();
         this.updateAllViews();
         // Ensure display is correct on page load
         this.renderAllCards();
@@ -435,6 +436,13 @@ class FlashcardApp {
             
             lastScrollTop = scrollTop;
         }, false);
+    }
+
+    resetNavbarScroll() {
+        const navButtons = document.querySelector('.nav-buttons');
+        if (navButtons) {
+            navButtons.scrollLeft = 0;
+        }
     }
 
     saveEditCard() {
