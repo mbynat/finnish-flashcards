@@ -264,7 +264,7 @@ class FlashcardApp {
             .filter(def => def);
 
         if (!finnish || definitions.length === 0) {
-            alert('Please fill in Finnish phrase and at least one definition');
+            alert('Please fill in language phrase and at least one definition');
             return;
         }
 
@@ -463,7 +463,7 @@ class FlashcardApp {
             .filter(def => def);
 
         if (!finnish || definitions.length === 0) {
-            alert('Please fill in Finnish word and at least one definition');
+            alert('Please fill in language word and at least one definition');
             return;
         }
 
@@ -558,7 +558,7 @@ class FlashcardApp {
             .filter(def => def); // Remove empty definitions
 
         if (!finnish || definitions.length === 0) {
-            alert('Please fill in Finnish word and at least one definition');
+            alert('Please fill in language word and at least one definition');
             return;
         }
 
@@ -629,7 +629,7 @@ class FlashcardApp {
             const definitions = Array.isArray(card.definitions) ? card.definitions : [card.english || ''];
             return `
                 <div class="card" data-card-id="${card.id}" data-is-phrase="false">
-                    <div class="card-label">Finnish</div>
+                    <div class="card-label">Language</div>
                     <div class="card-front">${this.escapeHtml(card.finnish)}</div>
                     <div class="card-label">Definitions</div>
                     <div class="card-back">
@@ -698,7 +698,7 @@ class FlashcardApp {
             const definitions = Array.isArray(card.definitions) ? card.definitions : [card.english || ''];
             return `
                 <div class="card" data-card-id="${card.id}" data-is-phrase="false">
-                    <div class="card-label">Finnish</div>
+                    <div class="card-label">Language</div>
                     <div class="card-front">${this.escapeHtml(card.finnish)}</div>
                     <div class="card-label">Definitions</div>
                     <div class="card-back">
@@ -851,7 +851,7 @@ class FlashcardApp {
 
         document.getElementById('practiceContent').innerHTML = `
             <div class="flashcard" onclick="app.toggleCard(this)">
-                <div class="card-side">Finnish</div>
+                <div class="card-side">Language</div>
                 <div class="card-content">${this.escapeHtml(card.finnish)}</div>
                 <div style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">(Click to reveal)</div>
                 <div class="card-hidden-content" style="display: none;">

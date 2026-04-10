@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finnish Flashcards</title>
+    <title>Language Flashcards</title>
     <link rel="icon" type="image/png" href="icon.png">
-    <link rel="stylesheet" href="styles.css?v=20260409b">
+    <link rel="stylesheet" href="styles.css?v=20260410a">
 </head>
 <body>
     <div class="container">
         <!-- Header with Title (always visible) -->
         <header class="header">
-            <h1 class="logo" role="button" tabindex="0" onclick="app.switchSection('home')">🌸 Finnish Flashcards</h1>
+            <h1 class="logo" role="button" tabindex="0" onclick="app.switchSection('home')">🌸 Language Flashcards</h1>
         </header>
 
         <!-- Navigation Bar (hides on scroll) -->
@@ -29,8 +29,8 @@
         <!-- Home Section -->
         <section id="home" class="section active">
             <div class="hero">
-                <h2>Welcome to Finnish Flashcards</h2>
-                <p>Learn Finnish with beautiful, interactive flashcards</p>
+                <h2>Welcome to Language Flashcards</h2>
+                <p>Learn language with beautiful, interactive flashcards</p>
                 <div class="stats">
                     <div class="stat-box">
                         <div class="stat-number" id="totalCards">0</div>
@@ -64,11 +64,11 @@
                 <h2>Add a New Word</h2>
                 <form id="addCardForm">
                     <div class="form-group">
-                        <label for="finnish">Finnish Word/Phrase</label>
+                        <label for="finnish">Language Word/Phrase</label>
                         <input 
                             type="text" 
                             id="finnish" 
-                            placeholder="Enter Finnish word or phrase"
+                            placeholder="Enter language word or phrase"
                             required
                         >
                     </div>
@@ -98,11 +98,11 @@
                 <h2>Add a New Phrase</h2>
                 <form id="addPhraseForm">
                     <div class="form-group">
-                        <label for="finnishPhrase">Finnish Phrase</label>
+                        <label for="finnishPhrase">Language Phrase</label>
                         <input 
                             type="text" 
                             id="finnishPhrase" 
-                            placeholder="Enter Finnish phrase"
+                            placeholder="Enter language phrase"
                             required
                         >
                     </div>
@@ -136,7 +136,7 @@
                         type="text" 
                         id="searchInput" 
                         class="search-input" 
-                        placeholder="🔍 Search by Finnish word or English translation..."
+                        placeholder="🔍 Search by language word or English translation..."
                     >
                 </div>                <div id="cardsGrid" class="cards-grid">
                     <div class="empty-state">
@@ -196,7 +196,7 @@
         </section>
     </div>
 
-    <script src="script.js?v=20260409b"></script>
+    <script src="script.js?v=20260410a"></script>
 
     <!-- Edit Modal -->
     <div id="editModal" class="modal">
@@ -205,11 +205,11 @@
             <h2>Edit Flashcard</h2>
             <form id="editCardForm">
                 <div class="form-group">
-                    <label for="editFinnish">Finnish Word/Phrase</label>
+                    <label for="editFinnish">Language Word/Phrase</label>
                     <input 
                         type="text" 
                         id="editFinnish" 
-                        placeholder="Enter Finnish word or phrase"
+                        placeholder="Enter language word or phrase"
                         required
                     >
                 </div>
